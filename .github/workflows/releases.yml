@@ -57,10 +57,10 @@ jobs:
           go-version: "1.21"
       - name: Install cosign
         uses: sigstore/cosign-installer@59acb6260d9c0ba8f4a2f9d9b48431a222b68e20 # main
-      - name: Install Trivy
-        uses: aquasecurity/trivy-action@207cd40078971bb7a078f8504c2061f908569449 # master
-        with:
-          scan-type: "fs"
+      - name: Install trivy
+        run:
+          curl -LO https://github.com/aquasecurity/trivy/releases/download/v0.50.1/trivy_0.50.1_Linux-ARM.deb
+          sudo dpkg -i trivy_0.50.1_Linux-ARM.deb
 
         
 
