@@ -58,7 +58,7 @@ jobs:
       - name: Install cosign
         uses: sigstore/cosign-installer@59acb6260d9c0ba8f4a2f9d9b48431a222b68e20 # main
       - name: Install trivy
-        run:
+        run: |
           curl -LO https://github.com/aquasecurity/trivy/releases/download/v0.50.1/trivy_0.50.1_Linux-ARM.deb
           sudo dpkg -i trivy_0.50.1_Linux-ARM.deb
 
