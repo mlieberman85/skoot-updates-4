@@ -61,6 +61,7 @@ jobs:
         run: |
           curl -LO https://github.com/aquasecurity/trivy/releases/download/v0.50.1/trivy_0.50.1_Linux-64bit.deb
           sudo dpkg -i trivy_0.50.1_Linux-64bit.deb
+          rm trivy_0.50.1_Linux-64bit.deb
 
         
 
